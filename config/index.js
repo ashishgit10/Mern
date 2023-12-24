@@ -7,6 +7,3 @@ export const PORT = process.env.PORT;
 export const MONGODB_URI = process.env.MONGODB_URI;
 export const DB_NAME = process.env.DB_NAME;
 
-console.log(`${DB_NAME}`)
-console.log(PORT)
-console.log(MONGODB_URI)
