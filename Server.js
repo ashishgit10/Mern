@@ -1,12 +1,14 @@
 import express from "express";
 import connectDb from "./src/db/Connections.js";
-import  {PORT}  from "./config/index.js";
+import { PORT } from "./config/index.js";
+import router from "./routes/index.js";
+import errorHandler from "./middlewares/errorHandler.js";
+
 const app = express();
 
+app.use(router)
 connectDb();
 
 app.listen(PORT, console.log(`Backend is running on port:${PORT}`));
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello from Server</h1>");
-});
+app.use(errorHandler)
