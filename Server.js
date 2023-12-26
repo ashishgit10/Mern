@@ -6,9 +6,11 @@ import errorHandler from "./middlewares/errorHandler.js";
 
 const app = express();
 
-app.use(router)
+app.use(express.json());
+
+app.use(router);
 connectDb();
 
 app.listen(PORT, console.log(`Backend is running on port:${PORT}`));
 
-app.use(errorHandler)
+app.use(errorHandler);
