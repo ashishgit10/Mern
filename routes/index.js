@@ -9,7 +9,7 @@ router.get("/test", (req, res) => {
 
 //USER
 //register
-router.post("/login", authControl.register);
+router.post("/register", authControl.register);
 //login
 router.post("/login", authControl.login);
 //logout

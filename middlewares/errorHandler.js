@@ -2,13 +2,14 @@ import ValidationError from "joi";
 
 const errorHandler = (error, req, res, next) => {
   //default error
+  console.log(error)
   let status = 500;
   let data = {
-    message: "Internal Server Error",
+    message: `Internal Server Error`
   };
   if (error instanceof ValidationError) {
-    status = 401;
-    data.message = error.message;
+    status=422;
+        data.message = error.message;
 
     return res.status(status).json(data);
   }

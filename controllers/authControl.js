@@ -1,7 +1,9 @@
 import Joi from "joi";
+import {User} from "../models/User.js"
 import bcrypt from "bcryptjs";
 
 const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,15}$/;
+
 const authControl = {
   async register(req, res, next) {
     // 1- validate user input
@@ -58,6 +60,10 @@ const authControl = {
     // 6- response send
     return res.status(201).json({ user });
   },
+
+
+
+
   async login() {},
 };
 export default authControl;
