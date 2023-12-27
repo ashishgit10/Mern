@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Joi from "joi";
 import { DB_NAME, MONGODB_URI } from "../../config/index.js";
 
 const connectDb = async () => {
