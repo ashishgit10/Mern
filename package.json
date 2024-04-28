@@ -1,22 +1,17 @@
 {
-  "name": "mongodb",
+  "name": "ejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules ./Server.js"
+    "start": "node index.js"
   },
-  "author": "ashish",
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "prettier": "^3.1.0"
-  },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "joi": "^17.11.0",
-    "mongoose": "^8.0.2"
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2"
   }
 }
